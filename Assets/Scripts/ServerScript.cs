@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ServerScript : MonoBehaviour
 {
-    [SerializeField] private string gameplaySceneName = "Gameplay";
+    [SerializeField] private string gameplaySceneName = "CharacterSelect";
    public void StartHost()
     {
         NetworkManager.Singleton.StartHost();

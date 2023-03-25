@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b06c7c69874ad4390b6d9b4d73ce98, type: 3}
+  m_Name: CharacterJohncena
+  m_EditorClassIdentifier: 
+  id: 4
+  displayName: John Cena
+  icon: {fileID: 21300000, guid: 8e15e35792404b44abbee974ba9bf725, type: 3}
+  introPrefab: {fileID: 5253670773729410941, guid: 7d0340e15862a7243a50e3f0783ba429, type: 3}
+  gameplayPrefab: {fileID: 3036374952926398636, guid: 0f0de8944ced28246bfca5029f07d1f6, type: 3}

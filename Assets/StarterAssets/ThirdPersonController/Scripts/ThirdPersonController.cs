@@ -2,6 +2,8 @@
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 using Unity.Netcode;
+using Cinemachine;
+
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -106,6 +108,8 @@ namespace StarterAssets
         private CharacterController _controller;
         public StarterAssetsInputs _input;
         private GameObject _mainCamera;
+        private CinemachineVirtualCamera _cinemachineVirtualCamera;
+        
 
         private const float _threshold = 0.01f;
 
@@ -131,6 +135,11 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+
+            if(_cinemachineVirtualCamera == null)
+            {
+                _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+            }
         }
 
         private void Start()
@@ -140,17 +149,25 @@ namespace StarterAssets
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
-#if ENABLE_INPUT_SYSTEM 
-            _playerInput = GetComponent<PlayerInput>();
-#else
-			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
-#endif
+
 
             AssignAnimationIDs();
 
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+        }
+
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+            if(IsClient && IsOwner)
+            {
+                _playerInput = GetComponent<PlayerInput>();
+                _playerInput.enabled = true;
+                _cinemachineVirtualCamera.Follow = transform.Find("PlayerCameraRoot");
+
+            }
         }
 
         private void Update()

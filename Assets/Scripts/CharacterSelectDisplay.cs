@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CharacterSelectDisplay : NetworkBehaviour
 {
-    [Header("References")]
     [SerializeField] private CharacterDatabase characterDatabase;
     [SerializeField] private Transform charactersHolder;
     [SerializeField] private CharacterSelectButton selectButtonPrefab;
@@ -14,11 +13,11 @@ public class CharacterSelectDisplay : NetworkBehaviour
     [SerializeField] private GameObject characterInfoPanel;
     [SerializeField] private TMP_Text characterNameText;
     [SerializeField] private Transform introSpawnPoint;
-    [SerializeField] private TMP_Text joinCodeText;
     [SerializeField] private Button lockInButton;
 
     private GameObject introInstance;
     private List<CharacterSelectButton> characterButtons = new List<CharacterSelectButton>();
+
     private NetworkList<CharacterSelectState> players;
 
     private void Awake()
@@ -51,11 +50,6 @@ public class CharacterSelectDisplay : NetworkBehaviour
             {
                 HandleClientConnected(client.ClientId);
             }
-        }
-
-        if(IsHost)
-        {
-            joinCodeText.text = HostManager.Instance.JoinCode;
         }
     }
 
@@ -163,12 +157,12 @@ public class CharacterSelectDisplay : NetworkBehaviour
             if (!player.IsLockedIn) { return; }
         }
 
-        foreach (var player in players)
+        foreach(var player in players)
         {
-            HostManager.Instance.SetCharacter(player.ClientId, player.CharacterId);
+            ServerManager.Instance.SetCharacter(player.ClientId, player.CharacterId);
         }
 
-        HostManager.Instance.StartGame();
+        ServerManager.Instance.StartGame();
     }
 
     private void HandlePlayersStateChanged(NetworkListEvent<CharacterSelectState> changeEvent)

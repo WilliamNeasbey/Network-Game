@@ -10,7 +10,7 @@ public class ServerScript : MonoBehaviour
    public void StartHost()
     {
         NetworkManager.Singleton.StartHost();
-        NetworkManager.Singleton.SceneManager.LoadScene(gameplaySceneName,LoadSceneMode.Single);
+      //  NetworkManager.Singleton.SceneManager.LoadScene(gameplaySceneName,LoadSceneMode.Single);
 
     }
 

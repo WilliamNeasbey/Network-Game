@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Prophet Goku
   icon: {fileID: 21300000, guid: 3081bb162a8628b4f92fb4e1131b84e9, type: 3}
   introPrefab: {fileID: 7950217998531542586, guid: cbc55371d7a5df74aae6dc92596a21ed, type: 3}
-  gameplayPrefab: {fileID: 3036374952926398636, guid: 0f0de8944ced28246bfca5029f07d1f6, type: 3}
+  gameplayPrefab: {fileID: 7994392013879077368, guid: 09bf99ce28baf714b911a420584581ed, type: 3}

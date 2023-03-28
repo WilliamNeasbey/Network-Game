@@ -2,12 +2,8 @@ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 using Unity.Netcode;
-using Unity.Netcode.Components;
 using Cinemachine;
-using UnityEngine.Networking;
-
-
-
+using StarterAssets;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -21,6 +17,7 @@ namespace StarterAssets
 #endif
     public class PlayerControllerNetwork : NetworkBehaviour
     {
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -106,7 +103,7 @@ namespace StarterAssets
         private int _animIDMotionSpeed;
 
 #if ENABLE_INPUT_SYSTEM 
-        private PlayerInput _playerInput;
+        public PlayerInput _playerInput;
 #endif
         private Animator _animator;
         private CharacterController _controller;
@@ -116,7 +113,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-
+/*
         private bool IsCurrentDeviceMouse
         {
             get
@@ -128,7 +125,7 @@ namespace StarterAssets
 #endif
             }
         }
-
+        */
 
         private void Awake()
         {
@@ -139,23 +136,27 @@ namespace StarterAssets
             }
         }
 
+        //network changes
+
         public override void OnNetworkSpawn()
         {
-            GameObject.FindGameObjectWithTag("PlayerCameraFollow").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
-            PlayerInput playerInput = GetComponent<PlayerInput>();
-            playerInput.enabled = true;
-        }
+            base.OnNetworkSpawn();
 
-     
+            if(IsClient && IsOwner)
+            {
+                PlayerInput playerInput = GetComponent<PlayerInput>();
+                playerInput.enabled = true;
+            }
+        }
         private void Start()
         {
-            _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
+            //_cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
-            _playerInput = GetComponent<PlayerInput>();
+          //  _playerInput = GetComponent<PlayerInput>();
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
@@ -165,11 +166,19 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            if(IsClient && IsOwner)
+            {
+                GameObject.FindWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow = transform.GetChild(0).transform;
+            }
         }
 
         private void Update()
         {
-            if (!IsLocalPlayer) return;
+            if (!IsLocalPlayer)
+            {
+                return;
+            }
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
@@ -212,7 +221,7 @@ namespace StarterAssets
             if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
             {
                 //Don't multiply mouse input by Time.deltaTime;
-                float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+                float deltaTimeMultiplier = 1.0f + Time.deltaTime;
 
                 _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
                 _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;

@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Mr Beast
   icon: {fileID: 21300000, guid: 3081bb162a8628b4f92fb4e1131b84e9, type: 3}
   introPrefab: {fileID: 7950217998531542586, guid: cbc55371d7a5df74aae6dc92596a21ed, type: 3}
-  gameplayPrefab: {fileID: 7994392013879077368, guid: 09bf99ce28baf714b911a420584581ed, type: 3}
+  gameplayPrefab: {fileID: 8934277276927209626, guid: 8fa65be356d65114fbca6e20a971ff49, type: 3}

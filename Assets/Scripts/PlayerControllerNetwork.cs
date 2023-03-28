@@ -113,29 +113,29 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-/*
-        private bool IsCurrentDeviceMouse
-        {
-            get
-            {
-#if ENABLE_INPUT_SYSTEM
-                return _playerInput.currentControlScheme == "KeyboardMouse";
-#else
-				return false;
-#endif
-            }
-        }
-        */
+        /*
+                private bool IsCurrentDeviceMouse
+                {
+                    get
+                    {
+        #if ENABLE_INPUT_SYSTEM
+                        return _playerInput.currentControlScheme == "KeyboardMouse";
+        #else
+                        return false;
+        #endif
+                    }
+                }
+                */
 
         private void Awake()
         {
             // get a reference to our main camera
             if (_mainCamera == null)
             {
-                _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+                //_mainCamera = GameObject.FindGameObjectWithTag("MainCamera"); // Replace this line with the one below
+                _mainCamera = gameObject.GetComponentInChildren<Camera>().gameObject;
             }
         }
-
         //network changes
 
         public override void OnNetworkSpawn()

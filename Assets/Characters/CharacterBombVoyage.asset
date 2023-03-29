@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Bomb Voyage
   icon: {fileID: 21300000, guid: 5f198fb8f68be6346a6ed691ebb96db7, type: 3}
   introPrefab: {fileID: 3154260321502022289, guid: 06895ad55e1b4b444a5d619d97c6675c, type: 3}
-  gameplayPrefab: {fileID: 8934277276927209626, guid: 8fa65be356d65114fbca6e20a971ff49, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}

@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Minecraft Steve
   icon: {fileID: 21300000, guid: 36f60bd48c5cdab4b8f6bd04c4120f2e, type: 3}
   introPrefab: {fileID: 2748259094593885307, guid: 975a12fd425cab7449b4903acf8d71dc, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 03ac7badfb5f65c4aa4dcf5194fc7a92, type: 3}

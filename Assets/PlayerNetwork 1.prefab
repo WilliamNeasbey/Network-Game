@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 535934324697471250}
   - component: {fileID: 4889189708044140987}
   - component: {fileID: 8350168429079467084}
-  - component: {fileID: 806523866417792275}
-  - component: {fileID: 5502822314531739756}
+  - component: {fileID: -601106969177145918}
+  - component: {fileID: -6428624267587439404}
   m_Layer: 0
   m_Name: PlayerNetwork 1
   m_TagString: Untagged
@@ -287,7 +287,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &806523866417792275
+--- !u!114 &-601106969177145918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 535934324697471252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d0e6fb9f187a164dae4290b68a5db90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -313,7 +313,7 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
---- !u!114 &5502822314531739756
+--- !u!114 &-6428624267587439404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

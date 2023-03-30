@@ -36,7 +36,7 @@ public class Network2DCharacter : NetworkBehaviour
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+    private Vector2 wallJumpingPower = new Vector2(16f, 32f); //original value 8f and 16f
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform GroundCheck;
@@ -65,6 +65,7 @@ public class Network2DCharacter : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!IsLocalPlayer)
         {
             return;
@@ -87,6 +88,7 @@ public class Network2DCharacter : NetworkBehaviour
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
+            
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -107,6 +109,8 @@ public class Network2DCharacter : NetworkBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
 
             coyoteTimeCounter = 0f;
+            Debug.Log("test");
+
         }
 
 

@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 9
   displayName: Jotaro
   icon: {fileID: 21300000, guid: 708a5db9f2a0db648a3a0f0568fabc15, type: 3}
-  introPrefab: {fileID: 7950217998531542586, guid: cbc55371d7a5df74aae6dc92596a21ed, type: 3}
+  introPrefab: {fileID: 2748259094593885307, guid: 87d1468f2b8125f4f906cf94ddaab101, type: 3}
   gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}

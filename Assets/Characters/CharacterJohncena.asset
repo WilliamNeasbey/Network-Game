@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: John Cena
   icon: {fileID: 21300000, guid: 8e15e35792404b44abbee974ba9bf725, type: 3}
   introPrefab: {fileID: 2748259094593885307, guid: f51d1d59f8bb34346ada92ee9bac82f6, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 94115b5674ef27444b4d66abe63f51c2, type: 3}

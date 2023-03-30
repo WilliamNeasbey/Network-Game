@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: The Rock
   icon: {fileID: 21300000, guid: daed597c8e230fd4b90d653e37e8541c, type: 3}
   introPrefab: {fileID: 7950217998531542586, guid: cbc55371d7a5df74aae6dc92596a21ed, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: f8c46228bb474d445b76e87a605d4e72, type: 3}

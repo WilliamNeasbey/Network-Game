@@ -915,20 +915,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 543885272}
-    PlayerPrefab: {fileID: 3700328688021596473, guid: 09bf99ce28baf714b911a420584581ed, type: 3}
+    PlayerPrefab: {fileID: 535934324697471252, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 5253670773729410941, guid: 0f0de8944ced28246bfca5029f07d1f6, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 3700328688021596473, guid: 09bf99ce28baf714b911a420584581ed, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 4635224924291006623, guid: d20757a6735f3d348b996c33c7757d8a, type: 3}
+      Prefab: {fileID: 535934324697471252, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -3137,8 +3127,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  _playerInput: {fileID: 0}
-  _input: {fileID: 0}
 --- !u!1 &4441848306836952447
 GameObject:
   m_ObjectHideFlags: 0

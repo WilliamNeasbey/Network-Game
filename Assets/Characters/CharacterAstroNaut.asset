@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Astronaut
   icon: {fileID: 21300000, guid: c395e7bd1c87ef6468c1c44a73580c22, type: 3}
   introPrefab: {fileID: 3154260321502022289, guid: 92a577cb911363f4aa2cd6eeaf7e7d2c, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: f0fc9741232fe7a4db2491fe35362b41, type: 3}

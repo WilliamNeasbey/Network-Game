@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Travis Scott
   icon: {fileID: 21300000, guid: 1677e563be83fe64288494dc35ee0cfb, type: 3}
   introPrefab: {fileID: 3154260321502022289, guid: 92a577cb911363f4aa2cd6eeaf7e7d2c, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 48a94b589bbdaca4a8f149c6f63c25bd, type: 3}

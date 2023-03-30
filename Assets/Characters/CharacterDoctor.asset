@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Doctor
   icon: {fileID: 21300000, guid: 12a501dbc70de354cbe3aa4ada065935, type: 3}
   introPrefab: {fileID: 5253670773729410941, guid: 7d0340e15862a7243a50e3f0783ba429, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 03d871392bdb24445b300a99ea42eddd, type: 3}

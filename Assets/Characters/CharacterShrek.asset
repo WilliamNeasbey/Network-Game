@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Shrek
   icon: {fileID: 21300000, guid: 35f1b46e26c4510419b0650df189ef25, type: 3}
   introPrefab: {fileID: 2748259094593885307, guid: 975a12fd425cab7449b4903acf8d71dc, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: fb8ead4bcd3712c4c84c3d9fbf83a4ec, type: 3}

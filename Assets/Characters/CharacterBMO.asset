@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: BMO
   icon: {fileID: 21300000, guid: 948e9376bcea541498f410625ef3248f, type: 3}
   introPrefab: {fileID: 3154260321502022289, guid: 06895ad55e1b4b444a5d619d97c6675c, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 34605aaf990bcff40976b15fbd970a9c, type: 3}

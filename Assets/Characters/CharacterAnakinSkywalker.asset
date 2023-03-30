@@ -16,4 +16,4 @@ MonoBehaviour:
   displayName: Anakin Skywalker
   icon: {fileID: 21300000, guid: e8c83238e2449274fa54d252d2a8a100, type: 3}
   introPrefab: {fileID: 2748259094593885307, guid: 975a12fd425cab7449b4903acf8d71dc, type: 3}
-  gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}
+  gameplayPrefab: {fileID: 8350168429079467084, guid: 974e24451e420434295e5896b41944da, type: 3}

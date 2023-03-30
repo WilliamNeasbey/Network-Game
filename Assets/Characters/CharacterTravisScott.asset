@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   displayName: Travis Scott
-  icon: {fileID: 21300000, guid: 3081bb162a8628b4f92fb4e1131b84e9, type: 3}
-  introPrefab: {fileID: 7950217998531542586, guid: cbc55371d7a5df74aae6dc92596a21ed, type: 3}
+  icon: {fileID: 21300000, guid: 1677e563be83fe64288494dc35ee0cfb, type: 3}
+  introPrefab: {fileID: 3154260321502022289, guid: 92a577cb911363f4aa2cd6eeaf7e7d2c, type: 3}
   gameplayPrefab: {fileID: 8350168429079467084, guid: f0267af55e2fe84448afde1652e33c2c, type: 3}

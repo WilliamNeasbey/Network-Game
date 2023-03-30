@@ -10,6 +10,8 @@ using UnityEngine.Networking;
 using Unity.Networking.Transport.Relay;
 using Unity.Netcode.Transports.UTP;
 using System.Text;
+using UnityEngine.UI;
+using TMPro;
 //using System.Diagnostics;
 
 
@@ -21,6 +23,8 @@ using System.Text;
 
 public class TestRelay : MonoBehaviour
 {
+    //public InputField inputField; // declare the input field variable
+    public TMP_InputField inputField; // change the type of the variable
     private async void Start()
     {
         await UnityServices.InitializeAsync();
@@ -60,7 +64,8 @@ public class TestRelay : MonoBehaviour
         }
     }
 
-    private async void JoinRelay(string joinCode)
+    /*
+    public async void JoinRelay(string joinCode)
     {
         try
         {
@@ -74,6 +79,28 @@ public class TestRelay : MonoBehaviour
             NetworkManager.Singleton.StartClient();
         }
         catch(RelayServiceException e)
+        {
+            Debug.Log(e);
+        }
+    }
+    */
+    public async void JoinRelay()
+    {
+        try
+        {
+            // Get the input value from the input field
+            string joinCode = inputField.text;
+
+            Debug.Log("Joining Relay with" + joinCode);
+            JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
+
+            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
+
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+
+            NetworkManager.Singleton.StartClient();
+        }
+        catch (RelayServiceException e)
         {
             Debug.Log(e);
         }

@@ -9,6 +9,8 @@ using Unity.Netcode;
 using UnityEngine.Networking;
 using Unity.Networking.Transport.Relay;
 using Unity.Netcode.Transports.UTP;
+using System.Text;
+//using System.Diagnostics;
 
 
 
@@ -26,12 +28,17 @@ public class TestRelay : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("Signed in" + AuthenticationService.Instance.PlayerId);
+           // Terminal.Log("Signed in" + AuthenticationService.Instance.PlayerId);
+
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
 
     //[Command]
-    private async void CreateRelay()
+
+   // [RegisterCommand("fortnite")]
+   
+    public async void CreateRelay()
     {
         try
         {
